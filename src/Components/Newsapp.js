@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Card from "./Card";
 import Loader from "./Loader"; 
+import logo from "../assets/logos.png";
 
 const Newsapp = () => {
   const [search, setSearch] = useState("india");
@@ -109,7 +110,11 @@ const Newsapp = () => {
 
       <nav style={{ display: "flex", justifyContent: "space-between", padding: 12 }}>
         <div>
-          <h1>News Aggregator</h1>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+               <img src={logo} alt="Logo" style={{ height: 40 }} />
+               <h1 style={{ margin: 0 }}>Abhi News</h1>
+          </div>
+
         </div>
 
         <div className="searchBar" style={{ display: "flex", gap: 8 }}>
@@ -127,7 +132,7 @@ const Newsapp = () => {
       </nav>
 
       <div>
-        <p className="head">Stay Updated with Abhi News</p>
+        <p className="head">Real-Time Headlines — Abhi News</p>
       </div>
 
       <div className="categoryBtn">
