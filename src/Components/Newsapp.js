@@ -45,7 +45,7 @@ const Newsapp = () => {
         setTotalResults(json.totalResults || articles.length);
       } else {
         // Fallback to local backend
-        const url = `https://news-aggregator-six-fawn.vercel.app/all-news?page=${page}&pageSize=${pageSize}&q=${encodeURIComponent(debouncedSearch || "india")}`;
+        const url = `/all-news?page=${page}&pageSize=${pageSize}&q=${encodeURIComponent(debouncedSearch || "india")}`;
         const resp = await fetch(url);
         if (!resp.ok) {
           const txt = await resp.text();
